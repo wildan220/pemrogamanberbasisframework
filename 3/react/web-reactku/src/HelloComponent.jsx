@@ -7,4 +7,4 @@ const HelloComponent= () => {
 }
 
 //agar component ini dapat dipakai di mana saja
-export default HelloComponent;  
+export default HelloComponent;

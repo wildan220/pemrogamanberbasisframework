@@ -25,4 +25,4 @@ import React from 'react';// Component menggunakan Functionconst Footer = (props
    <p>Nama Saya: { props.nama } </p>
   </div>
  );
-export default Footer;  
+}export default Footer;

@@ -1,20 +1,31 @@
-import React from 'react';
+import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Login from'./components/login';
-import Register from'./components/register';
-import Dashboard from'./components/dashboard';
+import ReactDOM from 'react-dom'; 
+import React, {Component} from 'react';
+import HelloComponent from './HelloComponent';
+import Test from './LifecycleComponent';
 
 function App() {
   return (
-    <div>
-      <Router>
-        <Routes>
-          <Route exact path="/login" element={<Login/>} />
-          <Route exact path="/register" element={<Register/>} />
-          <Route exact path="/dashboard" element={<Dashboard/>} />
-        </Routes>
-      </Router>
+    <div class="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+         Halo Dunia!
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+      <div class="praktikum">
+        <HelloComponent/>
+        <Test/>
+      </div>
     </div>
   );
 }
