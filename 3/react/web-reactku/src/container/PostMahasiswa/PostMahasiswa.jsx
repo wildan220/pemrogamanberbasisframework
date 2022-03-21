@@ -17,7 +17,7 @@ class PostMahasiswa extends Component{
     }
 
     ambilDataDariServerAPI = () => {
-        fetch('http://localhost:3002/mahasiswa?_sort=id&_order=desc')
+        fetch('http://localhost:3001/mahasiswa')
             .then(response => response.json())
             .then(result => {
                 this.setState({
@@ -49,7 +49,7 @@ class PostMahasiswa extends Component{
 
     handleTombolSimpan = () => {
         fetch('http://localhost:3002/mahasiswa', {
-            method: 'POST',
+            method: 'post',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
