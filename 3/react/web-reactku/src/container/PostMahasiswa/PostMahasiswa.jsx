@@ -17,7 +17,7 @@ class PostMahasiswa extends Component{
     }
 
     ambilDataDariServerAPI = () => {
-        fetch('http://localhost:3002/mahasiswa?_sort=id&_order=desc')
+        fetch('http://localhost:3002/mahasiswas?_sort=id&_order=desc')
             .then(response => response.json())
             .then(result => {
                 this.setState({
