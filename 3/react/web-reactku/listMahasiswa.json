@@ -6,7 +6,8 @@
       "alamat": "Jl. Soekarno Hatta No. 9 Malang",
       "hp": "081802023249",
       "angkatan": 2018,
-      "status": "aktif"
+      "status": "aktif",
+      "waktu": "28-03-2022"
     },
     {
       "nim": 140823453,
@@ -14,16 +15,26 @@
       "alamat": "Jl. Menur No. 9 Surabaya",
       "hp": "081802023523",
       "angkatan": 2014,
-      "status": "lulus"
+      "status": "lulus",
+      "waktu": "28-03-2022"
     },
     {
-      "id": 1648430346486,
-      "nim": "1222343123",
-      "nama": "wqeqwdsadasd",
-      "alamat": "adsdadafdsafd",
-      "hp": "412341242341431415",
-      "angkatan": "2342",
-      "status": "asfrtdaf"
+      "id": 1648437584417,
+      "nim": "19221212",
+      "nama": "wildaaaan",
+      "alamat": "bulurejo",
+      "hp": "082123339123",
+      "angkatan": "2019",
+      "status": "28-03-2022"
+    },
+    {
+      "id": 1648437603824,
+      "nim": "19221212",
+      "nama": "wildaaaan",
+      "alamat": "bulurejo",
+      "hp": "082123339123",
+      "angkatan": "2019",
+      "status": "aktif"
     }
   ],
   "comments": [],

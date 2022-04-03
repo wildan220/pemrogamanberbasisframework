@@ -17,7 +17,7 @@ class PostMahasiswa extends Component{
     }
 
     ambilDataDariServerAPI = () => {
-        fetch('http://localhost:3002/mahasiswas?_sort=id&_order=desc')
+        fetch('http://localhost:3002/mahasiswa?_sort=id&_order=desc')
             .then(response => response.json())
             .then(result => {
                 this.setState({
@@ -99,6 +99,12 @@ class PostMahasiswa extends Component{
                         <label htmlFor="status" className="col-sm-2 col-form-label">Status Mahasiswa</label>
                         <div className="col-sm-10">
                             <textarea className="form-control" id="status" name="status" rows="1" onChange={this.handleTambahMahasiswa}></textarea>
+                        </div>
+                    </div>
+                    <div className="form-group-row">
+                        <label htmlFor="status" className="col-sm-2 col-form-label">waktu</label>
+                        <div className="col-sm-10">
+                            <textarea className="form-control" id="waktu" name="waktu" rows="1" onChange={this.handleTambahMahasiswa}></textarea>
                         </div>
                     </div>
 
