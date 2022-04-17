@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import './BlogPost.css';
 import Post from "../../component/BlogPost/Post";
+import API from "../../services/Index";
 
 class BlogPost extends Component{
     state = {
@@ -14,13 +15,11 @@ class BlogPost extends Component{
     }
 
 ambilDataDariServerAPI =() => {
-    fetch('http://localhost:3001/posts')  //alamat url api yang ingin kita ambil datanya
-        .then(response => response.json())  //ubah respone data dari url api menjadi sebuah data json
-        .then(jsonHasilAmbilDariAPI => {    //data json hasil ambil dari api kita masukkan ke dalam list artikel pada state
-            this.setState({
-                listArtikel: jsonHasilAmbilDariAPI
-            })
+    API.getNewsBlog().then(result => {
+        this.setState({
+            listArtikel: result
         })
+    })
 }
 
 
@@ -29,11 +28,11 @@ componentDidMount() {        // komponen untuk mengecek ketika komponen telah di
 }
 
 handleHapusArtikel = (data) => {
-    fetch(`http://localhost:3001/posts/${data}`, {method: 'DELETE'})
-        .then(res => {
-            this.ambilDataDariServerAPI()
-        })
-}
+    API.deleteNewsBlog(data)
+    .then((response) => {
+      this.ambilDataDariSeverAPI();
+    });
+  };
 
 handleTambahArtikel = (event) =>{
     let formInsertArtikel = {...this.state.insertArtikel};
@@ -46,18 +45,11 @@ handleTambahArtikel = (event) =>{
 }
 
 handleTombolSimpan = () => {
-    fetch('http://localhost:3001/posts', {
-        method:'post',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(this.state.insertArtikel)
-    })
-
-        .then( (response ) => {
-            this.ambilDataDariServerAPI();
-        });
+    API.postNewsBlog(this.state.insertArtikel)
+    .then( (response) => {
+        this.ambilDataDariServerAPI();
+    });
+    
 }
 
 
